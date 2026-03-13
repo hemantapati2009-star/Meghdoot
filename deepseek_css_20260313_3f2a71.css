@@ -1,0 +1,172 @@
+/* Verse Page Specific Styles */
+.verse-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.verse-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-arrow {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-arrow:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(126, 200, 224, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.nav-arrow:hover:before {
+    width: 200px;
+    height: 200px;
+}
+
+.nav-arrow:hover {
+    color: #7ec8e0;
+    transform: scale(1.05);
+}
+
+.nav-arrow i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-arrow:hover i:first-child {
+    transform: translateX(-5px);
+}
+
+.nav-arrow:hover i:last-child {
+    transform: translateX(5px);
+}
+
+.verse-position {
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.verse-position .separator {
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
+#totalVerses {
+    opacity: 0.5;
+}
+
+/* Verse Card */
+.verse-card {
+    background: rgba(10, 25, 35, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(126, 200, 224, 0.3);
+    border-radius: 30px;
+    padding: 40px;
+    margin: 30px 0;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+    animation: cardGlow 3s infinite;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.verse-card:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+}
+
+@keyframes cardGlow {
+    0%, 100% {
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 20px rgba(126, 200, 224, 0.2);
+    }
+    50% {
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(126, 200, 224, 0.4);
+    }
+}
+
+.verse-decoration-top,
+.verse-decoration-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.verse-decoration-top {
+    top: 20px;
+    animation: floatDecoration 10s infinite;
+}
+
+.verse-decoration-bottom {
+    bottom: 20px;
+    animation: floatDecoration 10s infinite reverse;
+}
+
+.verse-decoration-top i,
+.verse-decoration-bottom i {
+    font-size: 2rem;
+    color: #7ec8e0;
+}
+
+@keyframes floatDecoration {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.verse-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.verse-number {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 40px;
+    color: #7ec8e0;
+    text-shadow: 0 0 20px rgba(126, 200, 224, 0.3);
+    position: relative;
+    display: inline-block;
+}
+
+.verse-number:before,
+.verse-number:after {
+    content: '~

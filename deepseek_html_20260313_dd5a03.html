@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meghdoot - The Cloud Messenger</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Rain Background -->
+    <div class="rain"></div>
+    
+    <!-- Floating Clouds -->
+    <div class="clouds">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <nav class="top-nav">
+            <div class="logo">
+                <i class="fas fa-cloud-rain"></i>
+                <span>Meghdoot</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active">Home</a>
+                <a href="#">About</a>
+                <a href="#">Gallery</a>
+            </div>
+        </nav>
+
+        <div class="hero-section">
+            <h1 class="title">
+                <span class="title-line">मेघदूतम्</span>
+                <span class="title-line translation">The Cloud Messenger</span>
+            </h1>
+            
+            <div class="verse-input-container">
+                <p class="invitation-text">Enter the verse you wish to explore</p>
+                <div class="input-group">
+                    <i class="fas fa-book-open input-icon"></i>
+                    <input type="text" id="verseInput" placeholder="e.g., 1.1 or 2.3" autocomplete="off">
+                    <button id="goToVerse" class="animated-button">
+                        <span>Begin Journey</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+                <p class="input-hint">Start with verse 1.1 to begin the journey</p>
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Discover the Poetry</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+
+        <div class="featured-preview">
+            <h2>Featured Verse</h2>
+            <div class="preview-card" onclick="navigateToVerse('1.1')">
+                <div class="preview-decoration"></div>
+                <div class="preview-content">
+                    <span class="verse-badge">Verse 1.1</span>
+                    <p class="preview-sanskrit">कश्चित्कान्ताविरहगुरुणा स्वाधिकारात्प्रमत्तः</p>
+                    <p class="preview-translation">A certain Yaksha, negligent in his duty due to separation from his beloved...</p>
+                    <button class="read-more-btn">
+                        Read Full Verse <i class="fas fa-feather-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

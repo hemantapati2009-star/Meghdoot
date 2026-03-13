@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verse - Meghdoot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="verse.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="rain"></div>
+    <div class="clouds">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+    </div>
+
+    <div class="container">
+        <nav class="top-nav">
+            <div class="logo">
+                <i class="fas fa-cloud-rain"></i>
+                <span>Meghdoot</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#" class="active">Verse</a>
+                <a href="#">About</a>
+            </div>
+        </nav>
+
+        <div class="verse-container">
+            <div class="verse-navigation">
+                <button class="nav-arrow" id="prevVerse">
+                    <i class="fas fa-chevron-left"></i>
+                    <span>Previous</span>
+                </button>
+                <div class="verse-position">
+                    <span id="currentVerseNum">1.1</span>
+                    <span class="separator">/</span>
+                    <span id="totalVerses">120</span>
+                </div>
+                <button class="nav-arrow" id="nextVerse">
+                    <span>Next</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="verse-card" id="verseCard">
+                <div class="verse-decoration-top">
+                    <i class="fas fa-cloud"></i>
+                    <i class="fas fa-feather-alt"></i>
+                    <i class="fas fa-cloud-rain"></i>
+                </div>
+                
+                <div class="verse-content">
+                    <h2 class="verse-number" id="verseNumber">Verse 1.1</h2>
+                    
+                    <div class="sanskrit-text" id="sanskritText">
+                        <!-- Sanskrit will be inserted here -->
+                    </div>
+                    
+                    <div class="translation-container">
+                        <h3>Translation</h3>
+                        <p class="translation-text" id="translationText">
+                            <!-- Translation will be inserted here -->
+                        </p>
+                    </div>
+                    
+                    <div class="detailed-notes" id="detailedNotes">
+                        <!-- Notes will be inserted here -->
+                    </div>
+                </div>
+                
+                <div class="verse-decoration-bottom">
+                    <i class="fas fa-om"></i>
+                    <i class="fas fa-peace"></i>
+                </div>
+            </div>
+
+            <div class="interaction-bar">
+                <button class="action-btn" id="shareBtn">
+                    <i class="fas fa-share-alt"></i>
+                    <span>Share</span>
+                </button>
+                <button class="action-btn" id="bookmarkBtn">
+                    <i class="far fa-bookmark"></i>
+                    <span>Bookmark</span>
+                </button>
+                <button class="action-btn" id="listenBtn">
+                    <i class="fas fa-headphones-alt"></i>
+                    <span>Listen</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="verse.js"></script>
+</body>
+</html>
